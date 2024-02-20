@@ -1,0 +1,24 @@
+.slider-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.fade-enter .slider-wrapper {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.fade-enter-active .slider-wrapper {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.fade-exit .slider-wrapper {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.fade-exit-active .slider-wrapper {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.fade-enter-active .slider-wrapper,
+.fade-exit-active .slider-wrapper {
+  transition: opacity 500ms, transform 400ms;
+}
